@@ -1,26 +1,38 @@
 import React, { useState, useEffect } from "react";
 import RingLoader from "react-spinners/RingLoader";
+import { connect } from "react-redux";
+import { startPreloader, finishPreloader } from "./actions/index";
 
-function App() {
-  const [loading, setLoading] = useState(false);
-
+function App({ startPreloader, finishPreloader, preloading }) {
   useEffect(() => {
-    setLoading(true);
+    startPreloader();
     setTimeout(() => {
-      setLoading(false);
+      finishPreloader();
     }, 2400);
   }, []);
+
   return (
     <>
-      {loading ? (
-        <div className="centerWrapper">
-          <RingLoader color={"#9DAAF2"} loading={loading} size={150} />
+      {preloading ? (
+        <div className="loaderWrapper">
+          <RingLoader color={"#9DAAF2"} loading={preloading} size={150} />
         </div>
       ) : (
-        <p>App</p>
+        <p>ahoj</p>
       )}
     </>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  preloading: state.preloading,
+});
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    startPreloader: () => dispatch(startPreloader()),
+    finishPreloader: () => dispatch(finishPreloader()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

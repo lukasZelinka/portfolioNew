@@ -1,8 +1,20 @@
-/* GENERAL */
+/* GLOBALL */
+:root {
+  --clr-white: #fff;
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --milky-way: #f8f8fb;
+  --tangerine: #ff6a3d;
+  --midnight: #1a2238;
+  --twilight: #29375b;
+  --daffodil: #f9db6d;
+  --lavender: #9daaf2;
+}
 body {
   margin: 0;
 }
-.centerWrapper {
+.loaderWrapper {
+  background-color: var(--midnight);
   display: flex;
   justify-content: center;
   align-items: center;

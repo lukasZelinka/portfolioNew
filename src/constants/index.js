@@ -1,0 +1,6 @@
+const PRELOADER = {
+  TRUE: "PRELOADER_TRUE",
+  FALSE: "PRELOADER_FALSE",
+};
+
+export { PRELOADER };
