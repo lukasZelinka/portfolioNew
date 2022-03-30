@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import RingLoader from "react-spinners/RingLoader";
 import { connect } from "react-redux";
 import { startPreloader, finishPreloader } from "./actions/index";
+import AppBar from "./components/AppBar";
 
 function App({ startPreloader, finishPreloader, preloading }) {
   useEffect(() => {
     startPreloader();
     setTimeout(() => {
       finishPreloader();
-    }, 2400);
+    }, 100);
   }, []);
 
   return (
@@ -18,7 +19,7 @@ function App({ startPreloader, finishPreloader, preloading }) {
           <RingLoader color={"#9DAAF2"} loading={preloading} size={150} />
         </div>
       ) : (
-        <p>ahoj</p>
+        <AppBar />
       )}
     </>
   );

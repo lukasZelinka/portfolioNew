@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap");
 /* GLOBALL */
 :root {
   --clr-white: #fff;
@@ -12,6 +13,7 @@
 }
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 .loaderWrapper {
   background-color: var(--midnight);
