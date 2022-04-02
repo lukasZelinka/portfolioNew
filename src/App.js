@@ -10,7 +10,7 @@ function App({ startPreloader, finishPreloader, preloading }) {
     startPreloader();
     setTimeout(() => {
       finishPreloader();
-    }, 2222400);
+    }, 2400);
   }, []);
 
   return (

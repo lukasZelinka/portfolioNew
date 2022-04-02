@@ -19,6 +19,7 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   /* background-color: #fee7c5; */
+  height: 10000px;
   
 }
 
@@ -34,7 +35,9 @@ body {
 
 @media screen and (max-width: 320px) {
 .css-1cqp065 {
-  right: 17px
+  right: 17px;
+  bottom: 17px;
+  
 }
 }
 

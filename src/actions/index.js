@@ -1,11 +1,17 @@
-import { PRELOADER } from "../constants";
+import { PRELOADER, ACTIVE_NAV } from "../constants";
 
-const startPreloader = () => ({
+export const startPreloader = () => ({
   type: PRELOADER.TRUE,
 });
 
-const finishPreloader = () => ({
+export const finishPreloader = () => ({
   type: PRELOADER.FALSE,
 });
 
-export { startPreloader, finishPreloader };
+export const whiteNavbar = () => ({
+  type: ACTIVE_NAV.TRUE,
+});
+
+export const transparentNavbar = () => ({
+  type: ACTIVE_NAV.FALSE,
+});

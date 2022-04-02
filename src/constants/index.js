@@ -3,4 +3,9 @@ const PRELOADER = {
   FALSE: "PRELOADER_FALSE",
 };
 
-export { PRELOADER };
+const ACTIVE_NAV = {
+  TRUE: "ACTIVE_NAV_TRUE",
+  FALSE: "ACTIVE_NAV_FALSE",
+};
+
+export { PRELOADER, ACTIVE_NAV };

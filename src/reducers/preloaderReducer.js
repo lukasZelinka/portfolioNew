@@ -1,4 +1,3 @@
-import { TryRounded } from "@mui/icons-material";
 import { PRELOADER } from "../constants";
 
 const preloaderReducer = (state = true, action) => {

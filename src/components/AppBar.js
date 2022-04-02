@@ -11,8 +11,8 @@ import {
   ThemeProvider,
   responsiveFontSizes,
 } from "@mui/material/styles";
-// import { connect } from "react-redux";
-// import {} from "../actions/index";
+import { connect } from "react-redux";
+import { transparentNavbar, whiteNavbar } from "../actions/index";
 
 let theme = createTheme({
   palette: {
@@ -46,22 +46,20 @@ let theme = createTheme({
   },
 });
 
-function ButtonAppBar() {
-  const [activeNav, setActiveNav] = React.useState(false);
-
-  const activeNavbar = () => {
-    if (window.scrollY > 100) {
-      setActiveNav(true);
+function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
+  const navbarColor = () => {
+    if (window.scrollY > 40) {
+      whiteNavbar();
     } else {
-      setActiveNav(false);
+      transparentNavbar();
     }
   };
 
   React.useEffect(() => {
-    window.addEventListener("scroll", activeNavbar);
+    window.addEventListener("scroll", navbarColor);
 
     return () => {
-      window.removeEventListener("scroll", activeNavbar);
+      window.removeEventListener("scroll", navbarColor);
     };
   }, []);
 
@@ -162,16 +160,17 @@ function ButtonAppBar() {
   );
 }
 
-// const mapStateToProps = (state) => ({
-//   inputValue: state.moviesReducer.inputValue,
-// });
+const mapStateToProps = (state) => ({
+  activeNav: state.activeNav,
+});
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     setInputValue: (newValue) => dispatch(setInputValue(newValue)),
+const mapDispatchToProps = (dispatch) => {
+  return {
+    whiteNavbar: () => dispatch(whiteNavbar()),
+    transparentNavbar: () => dispatch(transparentNavbar()),
+  };
+};
 
-//   };
-// };
-
-// export default connect(mapStateToProps, mapDispatchToProps)(ButtonAppBar);
-export default ButtonAppBar;
+// export default ButtonAppBar;
+// export default connect(mapStateToProps)(ButtonAppBar);
+export default connect(mapStateToProps, mapDispatchToProps)(ButtonAppBar);
