@@ -14,13 +14,21 @@ function App({ startPreloader, finishPreloader, preloading }) {
 
   return (
     <>
-      {preloading ? (
+      {/* {preloading ? (
         <div className="loaderWrapper">
           <RingLoader color={"#9DAAF2"} loading={preloading} size={150} />
         </div>
       ) : (
         <AppBar />
+      )} */}
+
+      {preloading && (
+        <div className="loaderWrapper">
+          <RingLoader color={"#9DAAF2"} loading={preloading} size={150} />
+        </div>
       )}
+      {/* <AppBar /> */}
+      {preloading || <AppBar />}
     </>
   );
 }

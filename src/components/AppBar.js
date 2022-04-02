@@ -11,6 +11,8 @@ import {
   ThemeProvider,
   responsiveFontSizes,
 } from "@mui/material/styles";
+// import { connect } from "react-redux";
+// import {} from "../actions/index";
 
 let theme = createTheme({
   palette: {
@@ -44,7 +46,7 @@ let theme = createTheme({
   },
 });
 
-export default function ButtonAppBar() {
+function ButtonAppBar() {
   const [show, setShow] = React.useState(false);
 
   const activeNavbar = () => {
@@ -159,3 +161,17 @@ export default function ButtonAppBar() {
     </ThemeProvider>
   );
 }
+
+// const mapStateToProps = (state) => ({
+//   inputValue: state.moviesReducer.inputValue,
+// });
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     setInputValue: (newValue) => dispatch(setInputValue(newValue)),
+
+//   };
+// };
+
+// export default connect(mapStateToProps, mapDispatchToProps)(ButtonAppBar);
+export default ButtonAppBar;
