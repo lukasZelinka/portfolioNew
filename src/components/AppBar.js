@@ -47,13 +47,13 @@ let theme = createTheme({
 });
 
 function ButtonAppBar() {
-  const [show, setShow] = React.useState(false);
+  const [activeNav, setActiveNav] = React.useState(false);
 
   const activeNavbar = () => {
     if (window.scrollY > 100) {
-      setShow(true);
+      setActiveNav(true);
     } else {
-      setShow(false);
+      setActiveNav(false);
     }
   };
 
@@ -82,7 +82,7 @@ function ButtonAppBar() {
                 }
               ),
             },
-            show && {
+            activeNav && {
               backgroundColor: "hsla(0,0%,100%,.5)",
             },
           ]}

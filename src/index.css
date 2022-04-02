@@ -19,7 +19,7 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   /* background-color: #fee7c5; */
-  height: 5000px;
+  
 }
 
 .loaderWrapper {
@@ -29,10 +29,13 @@ body {
   align-items: center;
   width: 100%;
   height: 100vh;
+  padding-right: 10em;
 }
-.red {
-  background-color: red;
-  width: 100%;
-  height: 1000px;
+
+@media screen and (max-width: 320px) {
+.css-1cqp065 {
+  right: 17px
 }
+}
+
 
