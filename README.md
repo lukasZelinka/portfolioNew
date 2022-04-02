@@ -2,5 +2,5 @@
 
 git init
 git add .
-git commit -m "Appbar.js - preolading - refactoring"
+git commit -m " preolading refactoring"
 git push
