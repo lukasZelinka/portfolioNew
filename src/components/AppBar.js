@@ -32,6 +32,11 @@ let theme = createTheme({
       // modra na pismo
       main: "#29375b",
     },
+    font: {
+      // modra na pismo
+      dark: "#29375b",
+      black: "#191919",
+    },
   },
   // typography: {
   //   fontFamily: "Comic Sans MS",
@@ -48,7 +53,7 @@ let theme = createTheme({
 
 function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
   const navbarColor = () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 30) {
       whiteNavbar();
     } else {
       transparentNavbar();
@@ -86,20 +91,33 @@ function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
           ]}
         >
           <Toolbar sx={{ justifyContent: "space-between" }}>
-            <Link href="/" sx={{ color: "tertiary.main" }}>
+            <Link href="/">
               <Button
                 color="inherit"
                 sx={[
+                  {
+                    fontSize: "1.5em",
+                    fontWeight: "900",
+                    padding: "0.8em",
+                    color: "tertiary.main",
+                    transition: theme.transitions.create(
+                      ["color", "transform"],
+                      {
+                        duration: 1000,
+                        easing: theme.transitions.easing.sharp,
+                      }
+                    ),
+                  },
+
                   {
                     "&:hover": {
                       color: "primary.main",
                       backgroundColor: "transparent",
                     },
                   },
-                  {
-                    fontSize: "1.5em",
-                    fontWeight: "900",
-                    padding: "0.8em",
+
+                  activeNav && {
+                    color: "#191919",
                   },
                 ]}
               >
@@ -116,28 +134,168 @@ function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
                 spacing={3}
                 sx={{
                   fontSize: "0.875em",
-                  letterSpacing: 1,
+                  letterSpacing: 0.9,
                   color: "quaternary.main",
                   fontWeight: "500",
                 }}
               >
-                <Grid item sx={{ display: { xs: "none", sm: "inline-block" } }}>
-                  HOME
+                <Grid
+                  item
+                  sx={{
+                    display: { xs: "none", sm: "inline-block" },
+                  }}
+                >
+                  <Link
+                    href="/"
+                    sx={[
+                      {
+                        color: "tertiary.main",
+                        transition: theme.transitions.create(
+                          ["color", "transform"],
+                          {
+                            duration: 1000,
+                            easing: theme.transitions.easing.sharp,
+                          }
+                        ),
+                      },
+
+                      {
+                        "&:hover": {
+                          color: "primary.main",
+                          // backgroundColor: "transparent",
+                        },
+                      },
+
+                      activeNav && {
+                        color: "font.dark",
+                      },
+                    ]}
+                  >
+                    HOME
+                  </Link>
                 </Grid>
                 <Grid item sx={{ display: { xs: "none", sm: "inline-block" } }}>
-                  ABOUT
+                  <Link
+                    href="/"
+                    sx={[
+                      {
+                        color: "tertiary.main",
+                        transition: theme.transitions.create(
+                          ["color", "transform"],
+                          {
+                            duration: 1000,
+                            easing: theme.transitions.easing.sharp,
+                          }
+                        ),
+                      },
+
+                      {
+                        "&:hover": {
+                          color: "primary.main",
+                          // backgroundColor: "transparent",
+                        },
+                      },
+
+                      activeNav && {
+                        color: "font.dark",
+                      },
+                    ]}
+                  >
+                    ABOUT
+                  </Link>
                 </Grid>
                 <Grid item sx={{ display: { xs: "none", sm: "inline-block" } }}>
-                  SKILLS
+                  <Link
+                    href="/"
+                    sx={[
+                      {
+                        color: "tertiary.main",
+                        transition: theme.transitions.create(
+                          ["color", "transform"],
+                          {
+                            duration: 1000,
+                            easing: theme.transitions.easing.sharp,
+                          }
+                        ),
+                      },
+
+                      {
+                        "&:hover": {
+                          color: "primary.main",
+                          // backgroundColor: "transparent",
+                        },
+                      },
+
+                      activeNav && {
+                        color: "font.dark",
+                      },
+                    ]}
+                  >
+                    SKILLS
+                  </Link>
                 </Grid>
                 <Grid item sx={{ display: { xs: "none", sm: "inline-block" } }}>
-                  PROJECTS
+                  <Link
+                    href="/"
+                    sx={[
+                      {
+                        color: "tertiary.main",
+                        transition: theme.transitions.create(
+                          ["color", "transform"],
+                          {
+                            duration: 1000,
+                            easing: theme.transitions.easing.sharp,
+                          }
+                        ),
+                      },
+
+                      {
+                        "&:hover": {
+                          color: "primary.main",
+                          // backgroundColor: "transparent",
+                        },
+                      },
+
+                      activeNav && {
+                        color: "font.dark",
+                      },
+                    ]}
+                  >
+                    PROJECTS
+                  </Link>
                 </Grid>
                 <Grid
                   item
                   sx={{ display: { xs: "none", sm: "inline-block" }, mr: 2 }}
                 >
-                  CONTACT
+                  <Link
+                    href="/"
+                    sx={[
+                      {
+                        color: "tertiary.main",
+                        transition: theme.transitions.create(
+                          ["color", "transform"],
+                          {
+                            duration: 1000,
+                            easing: theme.transitions.easing.sharp,
+                          }
+                        ),
+                      },
+
+                      {
+                        "&:hover": {
+                          color: "primary.main",
+                          // backgroundColor: "transparent",
+                        },
+                      },
+
+                      activeNav && {
+                        color: "font.dark",
+                      },
+                    ]}
+                  >
+                    CONTACT
+                  </Link>
                 </Grid>
                 <Grid item sx={{ display: { xs: "inline-block", sm: "none" } }}>
                   {" "}
@@ -146,7 +304,22 @@ function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
                     edge="start"
                     color="tertiary"
                     aria-label="menu"
-                    sx={{ mr: 2 }}
+                    sx={[
+                      {
+                        mr: 2,
+                        color: "tertiary.main",
+                        transition: theme.transitions.create(
+                          ["color", "transform"],
+                          {
+                            duration: 1000,
+                            easing: theme.transitions.easing.sharp,
+                          }
+                        ),
+                      },
+                      activeNav && {
+                        color: "primary.main",
+                      },
+                    ]}
                   >
                     <MenuIcon />
                   </IconButton>

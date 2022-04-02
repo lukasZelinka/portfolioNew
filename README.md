@@ -2,5 +2,5 @@
 
 git init
 git add .
-git commit -m "preloader"
+git commit -m "testing"
 git push
