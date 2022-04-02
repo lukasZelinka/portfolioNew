@@ -3,6 +3,7 @@ import RingLoader from "react-spinners/RingLoader";
 import { connect } from "react-redux";
 import { startPreloader, finishPreloader } from "./actions/index";
 import AppBar from "./components/AppBar";
+// import Home from "./components/Home";
 
 function App({ startPreloader, finishPreloader, preloading }) {
   useEffect(() => {
@@ -14,20 +15,11 @@ function App({ startPreloader, finishPreloader, preloading }) {
 
   return (
     <>
-      {/* {preloading ? (
-        <div className="loaderWrapper">
-          <RingLoader color={"#9DAAF2"} loading={preloading} size={150} />
-        </div>
-      ) : (
-        <AppBar />
-      )} */}
-
       {preloading && (
         <div className="loaderWrapper">
           <RingLoader color={"#9DAAF2"} loading={preloading} size={150} />
         </div>
       )}
-      {/* <AppBar /> */}
       {preloading || <AppBar />}
     </>
   );
