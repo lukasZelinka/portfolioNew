@@ -12,7 +12,7 @@ const Home = () => {
           justifyContent="center"
           alignItems="center"
           sx={{
-            // backgroundColor: "red",
+            backgroundColor: "red",
             widht: "100%",
             height: "70vh",
             position: "absolute",
@@ -22,20 +22,6 @@ const Home = () => {
             <img src="../lukas100.png" alt="author" />
           </Grid>
         </Grid>
-        <div className="area">
-          <ul className="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
       </Box>
       <img src="../skuska1.jpg" alt="" />
       <img src="../skuska2.jpg" alt="" />
