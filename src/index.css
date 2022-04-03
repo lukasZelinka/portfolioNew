@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap");
 
 /* GLOBALL */
-
-
-* {
-  outline: 1px solid red;
-}
-
-
 :root {
   --clr-white: #fff;
   --clr-black: #222;
@@ -19,12 +12,17 @@
   --daffodil: #f9db6d;
   --lavender: #9daaf2;
 }
+
 .colorTangerine {
   color: var(--tangerine);
 }
+
 body {
   -webkit-font-smoothing: antialiased;
-  margin: 0;  
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #fee7c5;
+  height: 5000px;
 }
 
 .loaderWrapper {
@@ -34,15 +32,6 @@ body {
   align-items: center;
   width: 100%;
   height: 100vh;
-  padding-right: 10em;
-}
-
-@media screen and (max-width: 320px) {
-.css-1cqp065 {
-  right: 17px;
-  bottom: 17px;
-  
-}
 }
 
 

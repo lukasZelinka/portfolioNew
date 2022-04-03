@@ -3,12 +3,10 @@ import RingLoader from "react-spinners/RingLoader";
 import { connect } from "react-redux";
 import { startPreloader, finishPreloader } from "./actions/index";
 import AppBar from "./components/AppBar";
-import Home from "./components/Home";
 
 function App({ startPreloader, finishPreloader, preloading }) {
   //
   window.addEventListener("load", function () {
-    // console.log("finished loading");
     finishPreloader();
   });
 
@@ -21,7 +19,6 @@ function App({ startPreloader, finishPreloader, preloading }) {
       ) : (
         <>
           <AppBar />
-          <Home />
         </>
       )}
     </>
