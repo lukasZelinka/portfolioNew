@@ -36,6 +36,7 @@ let theme = createTheme({
       // modra na pismo
       dark: "#29375b",
       black: "#191919",
+      white: "#F8F8F8",
     },
   },
   // typography: {
@@ -99,7 +100,7 @@ function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
                     fontSize: "1.5em",
                     fontWeight: "900",
                     padding: "0.8em",
-                    color: "tertiary.main",
+                    color: "font.white",
                     transition: theme.transitions.create(
                       ["color", "transform"],
                       {
@@ -149,7 +150,7 @@ function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
                     href="/"
                     sx={[
                       {
-                        color: "tertiary.main",
+                        color: "font.white",
                         transition: theme.transitions.create(
                           ["color", "transform"],
                           {
@@ -179,7 +180,7 @@ function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
                     href="/"
                     sx={[
                       {
-                        color: "tertiary.main",
+                        color: "font.white",
                         transition: theme.transitions.create(
                           ["color", "transform"],
                           {
@@ -209,7 +210,7 @@ function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
                     href="/"
                     sx={[
                       {
-                        color: "tertiary.main",
+                        color: "font.white",
                         transition: theme.transitions.create(
                           ["color", "transform"],
                           {
@@ -239,7 +240,7 @@ function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
                     href="/"
                     sx={[
                       {
-                        color: "tertiary.main",
+                        color: "font.white",
                         transition: theme.transitions.create(
                           ["color", "transform"],
                           {
@@ -272,7 +273,7 @@ function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
                     href="/"
                     sx={[
                       {
-                        color: "tertiary.main",
+                        color: "font.white",
                         transition: theme.transitions.create(
                           ["color", "transform"],
                           {
@@ -307,7 +308,7 @@ function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
                     sx={[
                       {
                         mr: 2,
-                        color: "tertiary.main",
+                        color: "font.white",
                         transition: theme.transitions.create(
                           ["color", "transform"],
                           {

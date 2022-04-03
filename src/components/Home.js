@@ -18,9 +18,8 @@ const Home = () => {
             position: "absolute",
           }}
         >
-          <Grid item sx={{ maxWidth: "100px" }}>
-            <p>ahoj</p>
-            {/* <img src="../lukas-small.png" alt="author" /> */}
+          <Grid item>
+            <img src="../lukas100.png" alt="author" />
           </Grid>
         </Grid>
         <div className="area">
