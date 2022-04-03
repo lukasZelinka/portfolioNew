@@ -16,9 +16,9 @@ function App({ startPreloader, finishPreloader, preloading }) {
   // useEffect(() => {
   window.addEventListener("load", function () {
     console.log("finished loading");
-    // setTimeout(() => {
-    finishPreloader();
-    // }, 1400);
+    setTimeout(() => {
+      finishPreloader();
+    }, 1400);
   });
   // }, []);
 
