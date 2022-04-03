@@ -71,7 +71,7 @@ function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ flexGrow: 1, zIndex: 1 }}>
+      <Box sx={{ flexGrow: 1 }}>
         <AppBar
           position="fixed"
           sx={[
