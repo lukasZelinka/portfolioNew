@@ -6,12 +6,21 @@ import AppBar from "./components/AppBar";
 import Home from "./components/Home";
 
 function App({ startPreloader, finishPreloader, preloading }) {
-  useEffect(() => {
-    startPreloader();
-    setTimeout(() => {
-      finishPreloader();
-    }, 2400);
-  }, []);
+  // useEffect(() => {
+  //   startPreloader();
+  //   setTimeout(() => {
+  //     finishPreloader();
+  //   }, 2400);
+  // }, []);
+
+  // useEffect(() => {
+  window.addEventListener("load", function () {
+    console.log("finished loading");
+    // setTimeout(() => {
+    finishPreloader();
+    // }, 1400);
+  });
+  // }, []);
 
   return (
     <>

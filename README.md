@@ -2,5 +2,5 @@
 
 git init
 git add .
-git commit -m "Home.js - author's picture loading - testing "
+git commit -m "preloader bug - testing 1 "
 git push

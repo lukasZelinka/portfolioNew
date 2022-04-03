@@ -71,11 +71,12 @@ function ButtonAppBar({ activeNav, whiteNavbar, transparentNavbar }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1, zIndex: 1 }}>
         <AppBar
           position="fixed"
           sx={[
             {
+              zIndex: 1,
               backgroundColor: "transparent",
               boxShadow: "none",
               transition: theme.transitions.create(

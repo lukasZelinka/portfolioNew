@@ -37,6 +37,10 @@ const Home = () => {
           </ul>
         </div>
       </Box>
+      <img src="../skuska1.jpg" alt="" />
+      <img src="../skuska2.jpg" alt="" />
+      <img src="../skuska3.jpg" alt="" />
+      <img src="../skuska4.jpg" alt="" />
     </>
   );
 };
