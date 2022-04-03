@@ -2,5 +2,5 @@
 
 git init
 git add .
-git commit -m "testing"
+git commit -m "Home.js - background animation's bugs refactoring "
 git push

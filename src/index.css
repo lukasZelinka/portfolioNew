@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap");
+/* @import url('https://fonts.googleapis.com/css?family=Exo:400,700'); */
+
 /* GLOBALL */
+
+
+/* * {
+  outline: 1px solid red;
+} */
+
+
 :root {
   --clr-white: #fff;
   --clr-black: #222;
@@ -17,7 +26,8 @@
 body {
   -webkit-font-smoothing: antialiased;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: 'Exo', sans-serif;
   /* background-color: #fee7c5; */
   height: 10000px;
   

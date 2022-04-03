@@ -1,11 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css?family=Exo:400,700'); */
-
-
-
-body { 
-    font-family: 'Exo', sans-serif;
- }
-
 .area {
     /* z-index: -1; */
     background: #4e54c8;
@@ -22,8 +14,10 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 70vh;
     overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 .circles li {
