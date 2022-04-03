@@ -6,13 +6,11 @@ import AppBar from "./components/AppBar";
 import Home from "./components/Home";
 
 function App({ startPreloader, finishPreloader, preloading }) {
-  useEffect(() => {
-    startPreloader();
-    window.addEventListener("load", function () {
-      console.log("finished loading");
-      finishPreloader();
-    });
-  }, []);
+  //
+  window.addEventListener("load", function () {
+    // console.log("finished loading");
+    finishPreloader();
+  });
 
   return (
     <>
