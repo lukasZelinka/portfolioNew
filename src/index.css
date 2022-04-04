@@ -21,7 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  background-color: #fee7c5;
+  /* background-color: #fee7c5; */
   height: 5000px;
 }
 

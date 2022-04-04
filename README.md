@@ -2,5 +2,5 @@
 
 git init
 git add .
-git commit -m " AppBar.js, Home.js - nice version "
+git commit -m " let theme added to App.js "
 git push
