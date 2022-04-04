@@ -2,5 +2,5 @@
 
 git init
 git add .
-git commit -m " Home.js - title added "
+git commit -m " Home.js - in development "
 git push

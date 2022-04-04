@@ -9,7 +9,7 @@ import {
 } from "@mui/material/styles";
 import AppBar from "./components/AppBar";
 import Home from "./components/Home";
-
+// MUI
 export let theme = createTheme({
   palette: {
     primary: {
@@ -47,7 +47,8 @@ export let theme = createTheme({
     },
   },
 });
-
+theme = responsiveFontSizes(theme);
+// Component
 function App({ startPreloader, finishPreloader, preloading }) {
   //
   window.addEventListener("load", function () {
