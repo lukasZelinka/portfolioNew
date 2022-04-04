@@ -2,5 +2,5 @@
 
 git init
 git add .
-git commit -m " let theme added to App.js "
+git commit -m " Home.js - title added "
 git push

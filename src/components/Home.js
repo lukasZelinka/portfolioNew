@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import "./Home.css";
 
 const Home = () => {
@@ -19,6 +19,12 @@ const Home = () => {
       >
         <Grid item>
           <img src="../lukas100.png" alt="author" />
+        </Grid>
+        <Grid item>
+          <Typography variant="h4" sx={{ m: 2, color: "font.white" }}>
+            I'm Lukas Zelinka
+          </Typography>
+          ;
         </Grid>
       </Grid>
     </>
