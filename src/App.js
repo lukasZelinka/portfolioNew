@@ -5,7 +5,7 @@ import { finishPreloader } from "./actions/index";
 import {
   createTheme,
   ThemeProvider,
-  responsiveFontSizes,
+  // responsiveFontSizes,
 } from "@mui/material/styles";
 import AppBar from "./components/AppBar";
 import Home from "./components/Home";
@@ -47,7 +47,7 @@ export let theme = createTheme({
     },
   },
 });
-theme = responsiveFontSizes(theme);
+// theme = responsiveFontSizes(theme);
 // Component
 function App({ finishPreloader, preloading }) {
   useEffect(() => {

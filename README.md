@@ -2,5 +2,5 @@
 
 git init
 git add .
-git commit -m " App.js - preloader - nice version "
+git commit -m " Home.js - in development "
 git push
