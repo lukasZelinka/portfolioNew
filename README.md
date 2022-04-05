@@ -2,5 +2,5 @@
 
 git init
 git add .
-git commit -m " App.js - preloader bug testing "
+git commit -m " App.js - preloader - nice version "
 git push

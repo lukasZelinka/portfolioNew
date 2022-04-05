@@ -1,10 +1,8 @@
-import { PRELOADER } from "../constants";
+import { PRELOADER_FALSE } from "../constants";
 
 const preloaderReducer = (state = true, action) => {
   switch (action.type) {
-    case PRELOADER.TRUE:
-      return true;
-    case PRELOADER.FALSE:
+    case PRELOADER_FALSE:
       return false;
     default:
       return state;

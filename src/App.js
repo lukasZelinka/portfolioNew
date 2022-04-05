@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RingLoader from "react-spinners/RingLoader";
 import { connect } from "react-redux";
-import { startPreloader, finishPreloader } from "./actions/index";
+import { finishPreloader } from "./actions/index";
 import {
   createTheme,
   ThemeProvider,
@@ -49,18 +49,16 @@ export let theme = createTheme({
 });
 theme = responsiveFontSizes(theme);
 // Component
-function App({ startPreloader, finishPreloader, preloading }) {
-  //
-  window.addEventListener("load", function () {
+function App({ finishPreloader, preloading }) {
+  useEffect(() => {
     setTimeout(() => finishPreloader(), 1000);
-  });
+  }, []);
 
   return (
     <>
       <ThemeProvider theme={theme}>
         {preloading && (
           <div className="loaderWrapper">
-            {/* <RingLoader color={"#9DAAF2"} loading={preloading} size={150} /> */}
             <RingLoader color={"#9DAAF2"} size={150} />
           </div>
         )}
@@ -77,7 +75,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    startPreloader: () => dispatch(startPreloader()),
     finishPreloader: () => dispatch(finishPreloader()),
   };
 };
