@@ -52,22 +52,20 @@ theme = responsiveFontSizes(theme);
 function App({ startPreloader, finishPreloader, preloading }) {
   //
   window.addEventListener("load", function () {
-    finishPreloader();
+    setTimeout(() => finishPreloader(), 1000);
   });
 
   return (
     <>
       <ThemeProvider theme={theme}>
-        {preloading ? (
+        {preloading && (
           <div className="loaderWrapper">
-            <RingLoader color={"#9DAAF2"} loading={preloading} size={150} />
+            {/* <RingLoader color={"#9DAAF2"} loading={preloading} size={150} /> */}
+            <RingLoader color={"#9DAAF2"} size={150} />
           </div>
-        ) : (
-          <>
-            <AppBar />
-            <Home />
-          </>
         )}
+        <AppBar />
+        <Home />
       </ThemeProvider>
     </>
   );

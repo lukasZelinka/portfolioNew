@@ -2,5 +2,5 @@
 
 git init
 git add .
-git commit -m " Home.js - Typewritter refacoring "
+git commit -m " App.js - preloader bug testing "
 git push

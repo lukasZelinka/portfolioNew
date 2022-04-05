@@ -27,7 +27,7 @@ const Home = () => {
         </Grid>
         <Grid item sx={{ mt: 3 }}>
           <Typography variant="h4" sx={{ color: "font.white" }}>
-            I'm Lukas Zelinka
+            Lukas Zelinka
           </Typography>
         </Grid>
         <Grid item sx={{ mt: 3 }}>

@@ -14,11 +14,10 @@
     animation: type 5s steps(520, end);
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    animation-delay: 1s;
     
     
 }
-
-
 
 @keyframes type {
     0% {
