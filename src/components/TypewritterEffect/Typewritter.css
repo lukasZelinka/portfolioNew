@@ -10,12 +10,11 @@
 
 .css-typing p:nth-child(1) {
     width: 8em;
-    -webkit-animation: type 2s steps(40, end);
-    animation: type 2s steps(520, end);
+    -webkit-animation: type 5s steps(520, end);
+    animation: type 5s steps(520, end);
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    animation-iteration-count: 3;
-    -webkit-animation-iteration-count: 3;
+    
     
 }
 

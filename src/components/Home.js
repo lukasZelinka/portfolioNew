@@ -17,7 +17,8 @@ const Home = () => {
         sx={{
           backgroundColor: "secondary.main",
           widht: "100%",
-          height: "70vh",
+          // height: "70vh",
+          height: { xs: "100vh", sm: "70vh" },
           position: "absolute",
         }}
       >
