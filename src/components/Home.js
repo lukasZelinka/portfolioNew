@@ -5,7 +5,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import "./Home.css";
 import Typewritter from "./TypewritterEffect/Typewritter";
-import Image from "../img/mountains.svg"; // Import using relative path
+import Image from "../img/mountains.svg";
+import { theme } from "../App";
 
 const Home = () => {
   console.log(Image);
@@ -33,19 +34,20 @@ const Home = () => {
           sx={{
             marginBottom: "2em",
             marginTop: "3em",
+            paddingLeft: "32px",
           }}
         >
           <img src="../lukas100.png" alt="author" />
         </Grid>
-        <Grid item={false} sx={{ marginBottom: "2em" }}>
+        <Grid item={false} sx={{ marginBottom: "2em", paddingLeft: "32px" }}>
           <Typography variant="h4" sx={{ color: "font.white" }}>
             Lukas Zelinka
           </Typography>
         </Grid>
-        <Grid item={false} sx={{ marginBottom: "4em" }}>
+        <Grid item={false} sx={{ marginBottom: "4em", paddingLeft: "32px" }}>
           <Typewritter />
         </Grid>
-        <Grid item={false}>
+        <Grid item={false} sx={{ paddingLeft: "32px" }}>
           <Grid
             container
             direction="row"
@@ -68,11 +70,18 @@ const Home = () => {
                     fontSize: "2em",
                     color: "#171515",
                     cursor: "pointer",
+                    transition: theme.transitions.create(
+                      ["color", "transform"],
+                      {
+                        duration: 1000,
+                        easing: theme.transitions.easing.sharp,
+                      }
+                    ),
                   },
 
                   {
                     "&:hover": {
-                      color: "#171515",
+                      color: "#000000",
                     },
                   },
                 ]}
@@ -85,11 +94,18 @@ const Home = () => {
                     fontSize: "2em",
                     color: "#39569c",
                     cursor: "pointer",
+                    transition: theme.transitions.create(
+                      ["color", "transform"],
+                      {
+                        duration: 1000,
+                        easing: theme.transitions.easing.sharp,
+                      }
+                    ),
                   },
 
                   {
                     "&:hover": {
-                      color: "#39569c",
+                      color: "#2f477a",
                     },
                   },
                 ]}
@@ -102,6 +118,13 @@ const Home = () => {
                     fontSize: "2em",
                     color: "#25D366",
                     cursor: "pointer",
+                    transition: theme.transitions.create(
+                      ["color", "transform"],
+                      {
+                        duration: 1000,
+                        easing: theme.transitions.easing.sharp,
+                      }
+                    ),
                   },
 
                   {

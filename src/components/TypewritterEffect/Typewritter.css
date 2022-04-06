@@ -1,5 +1,4 @@
 .css-typing p {
-    /* border-right: .15em solid orange; */
     font-size: 1.6em;
     white-space: nowrap;
     overflow: hidden;
@@ -24,26 +23,10 @@
     0% {
         width: 0;
     }
-
-    /* 99.9% {
-        border-right: .25em solid orange;
-    } */
-
-    /* 100% {
-        border: none;
-    } */
 }
 
 @-webkit-keyframes type {
     0% {
         width: 0;
     }
-
-    /* 99.9% {
-        border-right: .25em solid orange;
-    } */
-
-    /* 100% {
-        border: none;
-    } */
 }
