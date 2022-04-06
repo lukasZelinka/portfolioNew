@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
@@ -25,37 +25,43 @@ const Home = () => {
           widht: "100%",
           // height: "70vh",
           height: { xs: "100vh", sm: "80vh" },
-          position: "absolute",
+          // position: "absolute",
         }}
       >
-        <Grid item>
+        <Grid
+          item={false}
+          sx={{
+            marginBottom: "2em",
+            marginTop: "3em",
+          }}
+        >
           <img src="../lukas100.png" alt="author" />
         </Grid>
-        <Grid item>
-          <Typography
-            variant="h4"
-            sx={{ color: "font.white", marginBottom: "10px" }}
-          >
+        <Grid item={false} sx={{ marginBottom: "2em" }}>
+          <Typography variant="h4" sx={{ color: "font.white" }}>
             Lukas Zelinka
           </Typography>
         </Grid>
-        <Grid item>
+        <Grid item={false} sx={{ marginBottom: "4em" }}>
           <Typewritter />
         </Grid>
-        <Grid
-          item
-          sx={{
-            backgroundColor: "font.white",
-          }}
-        >
+        <Grid item={false}>
           <Grid
             container
             direction="row"
             justifyContent="center"
             alignItems="center"
-            spacing={5}
+            sx={{
+              backgroundColor: "font.white",
+              paddingTop: "0.4em",
+              paddingBottom: "0.2em",
+              paddingLeft: "0.8em",
+              paddingRight: "0.8em",
+              borderRadius: 2,
+              boxShadow: 3,
+            }}
           >
-            <Grid item>
+            <Grid item={false} sx={{ marginRight: "2em" }}>
               <GitHubIcon
                 sx={[
                   {
@@ -72,7 +78,7 @@ const Home = () => {
                 ]}
               />
             </Grid>
-            <Grid item>
+            <Grid item={false} sx={{ marginRight: "2em" }}>
               <FacebookIcon
                 sx={[
                   {
@@ -89,7 +95,7 @@ const Home = () => {
                 ]}
               />
             </Grid>
-            <Grid item>
+            <Grid item={false}>
               <WhatsAppIcon
                 sx={[
                   {

@@ -4,7 +4,7 @@ import "./Typewritter.css";
 const Typewritter = () => {
   return (
     <div className="css-typing">
-      <p>React Developer.</p>
+      <p>React Developer</p>
     </div>
   );
 };

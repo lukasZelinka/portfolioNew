@@ -45,13 +45,21 @@ export let theme = createTheme({
         color: "quaternary.main",
       },
     },
+    MuiGrid: {
+      styleOverrides: {
+        root: {
+          fontSize: "1em",
+          padding: 0,
+        },
+      },
+    },
   },
 });
 // theme = responsiveFontSizes(theme);
 // Component
 function App({ finishPreloader, preloading }) {
   useEffect(() => {
-    setTimeout(() => finishPreloader(), 1000);
+    setTimeout(() => finishPreloader(), 500);
   }, []);
 
   return (
