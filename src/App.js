@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import RingLoader from "react-spinners/RingLoader";
 import { connect } from "react-redux";
 import { finishPreloader } from "./actions/index";
+import Typography from "@mui/material/Typography";
 import {
   createTheme,
   ThemeProvider,
@@ -57,17 +58,24 @@ export let theme = createTheme({
 });
 // theme = responsiveFontSizes(theme);
 // Component
+
 function App({ finishPreloader, preloading }) {
   useEffect(() => {
-    setTimeout(() => finishPreloader(), 500);
-  }, []);
+    setTimeout(() => finishPreloader(), 1500);
+  }, [finishPreloader]);
 
   return (
     <>
       <ThemeProvider theme={theme}>
         {preloading && (
           <div className="loaderWrapper">
-            <RingLoader color={"#9DAAF2"} size={150} />
+            <RingLoader color={"#9DAAF2"} size={60} />
+            <Typography
+              variant="body1"
+              sx={{ color: "#9DAAF2", marginTop: "20px" }}
+            >
+              Loading...
+            </Typography>
           </div>
         )}
         <AppBar />

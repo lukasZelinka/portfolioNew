@@ -14,7 +14,8 @@
     animation: type 5s steps(520, end);
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
     
     
 }

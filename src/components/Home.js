@@ -9,7 +9,6 @@ import Image from "../img/mountains.svg";
 import { theme } from "../App";
 
 const Home = () => {
-  console.log(Image);
   return (
     <>
       <Grid
